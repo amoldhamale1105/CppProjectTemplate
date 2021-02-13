@@ -1,0 +1,3 @@
+#Bin directory to hold the ouput binary of the source code. Ignore content of this file
+*
+!.gitignore
