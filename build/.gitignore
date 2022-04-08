@@ -1,3 +1,0 @@
-#Build directory used to hold output of cmake. Ignore contents of this file for commit
-*
-!.gitignore
