@@ -10,7 +10,19 @@ set(SOURCE_DIR
     src/Sample.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
+set(CUSTOM_DS_PATH /home/amol/Projects/CustomDataStructures)
+
+find_path(CUSTOM_DS_INCLUDES Vector.hpp 
+    HINTS ${CUSTOM_DS_PATH}
+    PATH_SUFFIXES include)
+find_library(CUSTOM_DS_LIB CustomDataStructures 
+    HINTS ${CUSTOM_DS_PATH}
+    PATH_SUFFIXES lib)
+
 add_executable(${PROJECT_NAME} 
     ${INCLUDE_DIR}
     ${SOURCE_DIR}
     main.cpp)
+
+target_include_directories(${PROJECT_NAME} PRIVATE ${CUSTOM_DS_INCLUDES})
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CUSTOM_DS_LIB})
