@@ -5,12 +5,12 @@ project(SampleProject VERSION 1.0.0)
 include_directories(include)
 
 set(INCLUDE_DIR
-    include/Sample.hpp)
+    include/VectorTest.hpp)
 set(SOURCE_DIR
-    src/Sample.cpp)
+    src/VectorTest.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-set(CUSTOM_DS_PATH /home/amol/Projects/CustomDataStructures)
+set(CUSTOM_DS_PATH /home/bdha1kor/Projects/CustomDataStructures)
 
 find_path(CUSTOM_DS_INCLUDES Vector.hpp 
     HINTS ${CUSTOM_DS_PATH}
