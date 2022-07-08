@@ -12,7 +12,7 @@ set(SOURCE_DIR
     src/ListTest.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-set(CUSTOM_DS_PATH /home/bdha1kor/Projects/CustomDataStructures)
+set(CUSTOM_DS_PATH /home/$ENV{USER}/Projects/CustomDataStructures)
 
 find_path(CUSTOM_DS_INCLUDES Vector.hpp List.hpp
     HINTS ${CUSTOM_DS_PATH}
