@@ -41,5 +41,35 @@ void basicVectorTest()
 	std::cout<<std::endl;
 	std::cout<<test.capacity()<<test.size()<<std::endl;
 	std::cout<<test2.capacity()<<test2.size()<<std::endl;
+
+	Vector<std::string> stringVec;
+	stringVec.push_back("some");
+	stringVec.push_back("string");
+	stringVec.push_back("vector");
+	stringVec.push_back("is");
+	stringVec.push_back("under");
+	stringVec.push_back("creation");
+
+	for(auto i = 0; i < stringVec.size(); ++i)
+    {
+        std::cout<<stringVec.at(i)<<" ";
+    }
+
+	//Copy constructor test
+	Vector<int> test3 = test;
+	test3[2] = 999;
+
+	std::cout<<"\nprinting test:"<<std::endl;
+	for(int i = 0; i < test.size(); ++i)
+	{
+		std::cout<<test[i]<<" ";
+	}
+	std::cout<<"\nprinting test3:"<<std::endl;
+	for(int i = 0; i < test3.size(); ++i)
+	{
+		std::cout<<test3[i]<<" ";
+	}
+	std::cout<<std::endl;
+
 	std::cout<<"--------------ending Vector test-----------------\n"<<std::endl;
 }

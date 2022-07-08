@@ -17,6 +17,22 @@ void basicListTest()
         std::cout<<elementList.at(i)<<"->";
     }
     std::cout<<"end of list"<<std::endl;
+
+    List<std::string> strList;
+    strList.push_back("friends");
+    strList.push_back("pee");
+    strList.push_back("lo");
+    strList.push_front("hello");
+    std::string insertionStr("chai");
+    strList.insert(insertionStr, 2);
+
+    Vector<std::string> stringList = strList.get_list();
+    for(auto i = 0; i < stringList.size(); ++i)
+    {
+        std::cout<<stringList[i]<<" ";
+    }
+    std::cout<<std::endl;
+
     std::cout<<"--------------ending List test-----------------\n"<<std::endl;
     
 }
