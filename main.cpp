@@ -1,10 +1,12 @@
 #include <iostream>
 #include <VectorTest.hpp>
+#include <ListTest.hpp>
 
 int global_var = 20;
 
 int main(int argc, char** argv)
 {
 	basicVectorTest();
-    return 0;
+	basicListTest();
+	return 0;
 }

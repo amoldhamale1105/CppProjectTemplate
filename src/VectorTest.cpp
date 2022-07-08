@@ -4,6 +4,7 @@ static int global_var = 20;
 
 void basicVectorTest()
 {
+	std::cout<<"--------------starting Vector test-----------------"<<std::endl;
 	Vector<int> test(8, 3);
 	std::cout<<test.capacity()<<test.size()<<std::endl;
 	test.push_back(9);
@@ -20,6 +21,8 @@ void basicVectorTest()
 	test2.push_back(3);
 	test2.push_back(4);
 	test2.push_back(5);
+	int a = 10;
+	test2.push_back(a); //lvalue test
 	test2.push_back(6);
 
 	test2.pop_back();
@@ -38,5 +41,5 @@ void basicVectorTest()
 	std::cout<<std::endl;
 	std::cout<<test.capacity()<<test.size()<<std::endl;
 	std::cout<<test2.capacity()<<test2.size()<<std::endl;
-
+	std::cout<<"--------------ending Vector test-----------------\n"<<std::endl;
 }
