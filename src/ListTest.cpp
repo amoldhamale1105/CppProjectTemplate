@@ -60,6 +60,25 @@ void basicListTest()
     myList[1] = 47;
     strList[3] = "coffee";
 
+    List<int> copyList = myList;
+    copyList.push_front(999);
+    copyList.remove(6);
+    for(auto i = 0; i < copyList.size(); ++i)
+    {
+        std::cout<<copyList.at(i)<<"->";
+    }
+    std::cout<<"end of list"<<std::endl;
+
+    List<std::string> anotherStrList;
+    anotherStrList = strList;
+    anotherStrList[3] = "juice";
+    anotherStrList.remove(0);
+    for(auto i = 0; i < anotherStrList.size(); ++i)
+    {
+        std::cout<<anotherStrList[i]<<" ";
+    }
+    std::cout<<std::endl;
+
     for(auto i = 0; i < myList.size(); ++i)
     {
         std::cout<<myList.at(i)<<"->";
