@@ -13,7 +13,7 @@ void basicListTest()
     myList.push_front(b); //lvalue test
     myList.push_front(5);
 
-    Vector<int> elementList = myList.get_list();
+    Vector<int> elementList = myList.to_vector();
     for(auto i = 0; i < elementList.size(); ++i)
     {
         std::cout<<elementList.at(i)<<"->";
@@ -30,36 +30,70 @@ void basicListTest()
     strList.push_back("jaldi");
     strList.push_front("surrrr");
 
-    Vector<std::string> stringList = strList.get_list();
-    for(auto i = 0; i < stringList.size(); ++i)
+    for(auto i = 0; i < strList.size(); ++i)
     {
-        std::cout<<stringList[i]<<" ";
+        std::cout<<strList[i]<<" ";
     }
     std::cout<<std::endl;
 
-    std::cout<<myList.find(3)<<std::endl;
+    std::cout<<"reversed..."<<std::endl;
+    myList.reverse();
+    strList.reverse();
+    for(auto i = 0; i < myList.size(); ++i)
+    {
+        std::cout<<myList.at(i)<<"->";
+    }
+    std::cout<<"end of list"<<std::endl;
+    
+    for(auto i = 0; i < strList.size(); ++i)
+    {
+        std::cout<<strList[i]<<" ";
+    }
+    std::cout<<std::endl;
+
+    std::cout<<"reversed again to set them straight..."<<std::endl;
+    myList.reverse();
+    strList.reverse();
+
+    std::cout<<myList.front()<<" "<<myList.back()<<std::endl;
+    std::cout<<strList.front()<<" "<<strList.back()<<std::endl;
+    myList[1] = 47;
+    strList[3] = "coffee";
+
+    for(auto i = 0; i < myList.size(); ++i)
+    {
+        std::cout<<myList.at(i)<<"->";
+    }
+    std::cout<<"end of list"<<std::endl;
+
+    for(auto i = 0; i < strList.size(); ++i)
+    {
+        std::cout<<strList[i]<<" ";
+    }
+    std::cout<<std::endl;
+
+    strList[3] = "chai";
     std::cout<<strList.position("lo")<<std::endl;
     std::cout<<strList.position("randomString")<<std::endl;
-    std::cout<<myList.find(-44)<<std::endl;
-    std::cout<<myList.find(133)<<std::endl;
+    std::cout<<myList.at(-44)<<std::endl;
+    std::cout<<myList.at(133)<<std::endl;
     std::cout<<myList.recursive_search(7)<<std::endl;
     std::cout<<myList.recursive_search(54)<<std::endl;
     std::cout<<strList.recursive_search("pee")<<std::endl;
 
     myList.remove(2);
     myList.remove(100);
-    Vector<int> modifiedList = myList.get_list();
-    for(auto i = 0; i < modifiedList.size(); ++i)
+
+    for(auto i = 0; i < myList.size(); ++i)
     {
-        std::cout<<modifiedList.at(i)<<"->";
+        std::cout<<myList.at(i)<<"->";
     }
     std::cout<<"end of list"<<std::endl;
 
     strList.remove(-21);
-    Vector<std::string> modifiedStringList = strList.get_list();
-    for(auto i = 0; i < modifiedStringList.size(); ++i)
+    for(auto i = 0; i < strList.size(); ++i)
     {
-        std::cout<<modifiedStringList[i]<<" ";
+        std::cout<<strList[i]<<" ";
     }
     std::cout<<std::endl;
 
@@ -67,17 +101,16 @@ void basicListTest()
     std::cout<<"front popped value in string list: "<<strList.pop_front()<<std::endl;
     std::cout<<"back popped value in int list: "<<myList.pop_back()<<std::endl;
     std::cout<<"back popped value in string list: "<<strList.pop_back()<<std::endl;
-    Vector<int> newList = myList.get_list();
-    for(auto i = 0; i < newList.size(); ++i)
+
+    for(auto i = 0; i < myList.size(); ++i)
     {
-        std::cout<<newList.at(i)<<"->";
+        std::cout<<myList[i]<<"->";
     }
     std::cout<<"end of list"<<std::endl;
     
-    Vector<std::string> newStringList = strList.get_list();
-    for(auto i = 0; i < newStringList.size(); ++i)
+    for(auto i = 0; i < strList.size(); ++i)
     {
-        std::cout<<newStringList[i]<<" ";
+        std::cout<<strList.at(i)<<" ";
     }
     std::cout<<std::endl;
 
