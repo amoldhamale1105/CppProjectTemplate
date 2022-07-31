@@ -41,6 +41,8 @@ void basicStackTest()
     Stack<Dict> copyDict;
     copyDict = myDict;
 
+    myDict.reverse();
+
     while (!myDict.isEmpty())
     {
         Dict instance = myDict.pop();
@@ -53,6 +55,22 @@ void basicStackTest()
     {
         Dict instance = copyDict.pop();
         std::cout<<instance.key<<" "<<instance.value<<",";
+    }
+    std::cout<<std::endl;
+
+    Stack<int> numStack;
+    numStack.push(11);
+    numStack.push(13);
+    numStack.push(15);
+    numStack.push(17);
+    numStack.push(19);
+
+    std::cout<<numStack.depth()<<std::endl;
+    numStack.reverse();
+
+    while (!numStack.isEmpty())
+    {
+        std::cout<<numStack.pop()<<" ";
     }
     std::cout<<std::endl;
     
