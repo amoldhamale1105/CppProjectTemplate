@@ -8,17 +8,19 @@ set(INCLUDE_DIR
     include/VectorTest.hpp
     include/ListTest.hpp
     include/StackTest.hpp
-    include/QueueTest.hpp)
+    include/QueueTest.hpp
+    include/HeapTest.hpp)
 set(SOURCE_DIR
     src/VectorTest.cpp
     src/ListTest.cpp
     src/StackTest.cpp
-    src/QueueTest.cpp)
+    src/QueueTest.cpp
+    src/HeapTest.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 set(CUSTOM_DS_PATH /home/$ENV{USER}/Projects/CustomDataStructures)
 
-find_path(CUSTOM_DS_INCLUDES Vector.hpp List.hpp Stack.hpp Queue.hpp
+find_path(CUSTOM_DS_INCLUDES Vector.hpp
     HINTS ${CUSTOM_DS_PATH}
     PATH_SUFFIXES include)
 find_library(CUSTOM_DS_LIB CustomDataStructures 

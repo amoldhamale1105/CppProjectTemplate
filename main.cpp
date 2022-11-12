@@ -3,6 +3,7 @@
 #include <ListTest.hpp>
 #include <StackTest.hpp>
 #include <QueueTest.hpp>
+#include <HeapTest.hpp>
 
 #define UNUSED(x) (void)(x)
 
@@ -14,5 +15,6 @@ int main(int argc, char** argv)
 	basicListTest();
 	basicStackTest();
 	basicQueueTest();
+	basicHeapTest();
 	return 0;
 }
