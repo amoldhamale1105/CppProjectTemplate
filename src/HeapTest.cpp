@@ -3,7 +3,7 @@
 void basicHeapTest()
 {
     std::cout<<"--------------starting Heap test-----------------"<<std::endl;
-    Heap<int> pq(5, Heap<int>::MAX);
+    Heap<int, std::greater<int>> pq(5);
     pq.push(30);
     pq.push(23);
     pq.push(12);
