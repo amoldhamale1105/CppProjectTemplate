@@ -4,18 +4,13 @@ project(SampleProject VERSION 1.0.0)
 
 include_directories(include)
 
-set(INCLUDE_DIR
-    include/VectorTest.hpp
-    include/ListTest.hpp
-    include/StackTest.hpp
-    include/QueueTest.hpp
-    include/HeapTest.hpp)
-set(SOURCE_DIR
+set(SOURCES
     src/VectorTest.cpp
     src/ListTest.cpp
     src/StackTest.cpp
     src/QueueTest.cpp
-    src/HeapTest.cpp)
+    src/HeapTest.cpp
+    src/HashmapTest.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 set(CUSTOM_DS_PATH /home/$ENV{USER}/Projects/CustomDataStructures)
@@ -28,8 +23,7 @@ find_library(CUSTOM_DS_LIB CustomDataStructures
     PATH_SUFFIXES lib)
 
 add_executable(${PROJECT_NAME} 
-    ${INCLUDE_DIR}
-    ${SOURCE_DIR}
+    ${SOURCES}
     main.cpp)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CUSTOM_DS_INCLUDES})
