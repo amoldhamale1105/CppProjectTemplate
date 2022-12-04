@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-project(SampleProject VERSION 1.0.0)
+project(CDS_Test VERSION 1.0.0)
 
 include_directories(include)
 

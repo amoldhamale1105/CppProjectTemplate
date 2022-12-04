@@ -31,6 +31,12 @@ void basicHeapTest()
         std::cout<<pq[i]<<" ";
     }
     std::cout<<"empty? "<<(pq.isEmpty() ? "yes" : "no")<<std::endl;
+
+    Heap<int, std::greater<int>> copyPq /*= pq*/;
+    copyPq = pq;
+    copyPq.push(13);
+    copyPq.push(18);
+    
     std::cout<<"popping all..."<<std::endl;
     while (!pq.isEmpty())
     {
@@ -38,6 +44,13 @@ void basicHeapTest()
     }
     std::cout<<"empty? "<<(pq.isEmpty() ? "yes" : "no")<<std::endl;
     std::cout<<"topmost element: "<<pq.pop()<<std::endl;
+
+    std::cout<<"popping all from copy..."<<std::endl;
+    while (!copyPq.isEmpty())
+    {
+        std::cout<<copyPq.pop()<<" ";
+    }
+    std::cout<<"copy empty? "<<(copyPq.isEmpty() ? "yes" : "no")<<std::endl;
 
     Heap<std::string> strpq;
     strpq.push("Not");
