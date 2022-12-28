@@ -5,6 +5,7 @@
 #include <QueueTest.hpp>
 #include <HeapTest.hpp>
 #include <HashmapTest.hpp>
+#include <TrieTest.hpp>
 
 #define UNUSED(x) (void)(x)
 
@@ -18,5 +19,6 @@ int main(int argc, char** argv)
 	basicQueueTest();
 	basicHeapTest();
 	basicHashmapTest();
+	basicTrieTest();
 	return 0;
 }
