@@ -11,7 +11,8 @@ set(SOURCES
     src/QueueTest.cpp
     src/HeapTest.cpp
     src/HashmapTest.cpp
-    src/TrieTest.cpp)
+    src/TrieTest.cpp
+    src/GraphTest.cpp)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
 set(CUSTOM_DS_PATH /home/$ENV{USER}/Projects/CustomDataStructures)
