@@ -26,6 +26,7 @@ void basicStringTest()
     std::cout<<concat.c_str()<<std::endl;
 
     String mistake = "Oops, there are a few types";
+    std::cout<<mistake<<std::endl;
     String corrected = std::move(mistake);
 
     corrected[25] = 'o';
@@ -40,8 +41,11 @@ void basicStringTest()
     concat = str1 + " " + str2 + " " + str3 + " " + str4;
     str += ',';
     str.append(' ');
+    name.clear();
+    std::cout<<"name empty? "<<(name.empty() ? "yes" : "no")<<std::endl;
+    name = str;
     str += concat;
-    std::cout<<str<<std::endl;
+    std::cout<<name<<" + "<<concat<<" -> "<<str<<std::endl;
 
     std::cout<<"--------------ending String test-----------------\n"<<std::endl;
 }
