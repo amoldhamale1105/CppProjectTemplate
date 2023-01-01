@@ -3,7 +3,7 @@
 void basicTrieTest()
 {
     std::cout<<"--------------starting Trie test-----------------"<<std::endl;
-    std::string wordList[] = {"Rise", "Ripe", "Rice", "hello", "apple", "ape", "news"};
+    String wordList[] = {"Rise", "Ripe", "Rice", "hello", "apple", "ape", "news"};
     Trie tr;
     for(auto i = 0; i < 7; i++)
     {
