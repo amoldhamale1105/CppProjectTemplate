@@ -7,6 +7,7 @@
 #include <HashmapTest.hpp>
 #include <TrieTest.hpp>
 #include <GraphTest.hpp>
+#include <StringTest.hpp>
 
 #define UNUSED(x) (void)(x)
 
@@ -22,5 +23,6 @@ int main(int argc, char** argv)
 	basicHashmapTest();
 	basicTrieTest();
 	basicGraphTest();
+	basicStringTest();
 	return 0;
 }
