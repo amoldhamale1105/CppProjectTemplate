@@ -15,20 +15,20 @@ void basicHeapTest()
 
     for(auto i = 0; i < pq.size(); ++i)
     {
-        std::cout<<pq[i]<<" ";
+        std::cout<<pq.at(i)<<" ";
     }
 
     std::cout<<"topmost element: "<<pq.top()<<std::endl;
     pq.pop();
     for(auto i = 0; i < pq.size(); ++i)
     {
-        std::cout<<pq[i]<<" ";
+        std::cout<<pq.at(i)<<" ";
     }
     
     std::cout<<"topmost element: "<<pq.pop()<<std::endl;
     for(auto i = 0; i < pq.size(); ++i)
     {
-        std::cout<<pq[i]<<" ";
+        std::cout<<pq.at(i)<<" ";
     }
     std::cout<<"empty? "<<(pq.isEmpty() ? "yes" : "no")<<std::endl;
 
@@ -63,20 +63,20 @@ void basicHeapTest()
 
     for(auto i = 0; i < strpq.size(); ++i)
     {
-        std::cout<<strpq[i]<<" ";
+        std::cout<<strpq.at(i)<<" ";
     }
 
     std::cout<<"topmost element: "<<strpq.top()<<std::endl;
     strpq.pop();
     for(auto i = 0; i < strpq.size(); ++i)
     {
-        std::cout<<strpq[i]<<" ";
+        std::cout<<strpq.at(i)<<" ";
     }
     
     std::cout<<"topmost element: "<<strpq.pop()<<std::endl;
     for(auto i = 0; i < strpq.size(); ++i)
     {
-        std::cout<<strpq[i]<<" ";
+        std::cout<<strpq.at(i)<<" ";
     }
     std::cout<<"empty? "<<(strpq.isEmpty() ? "yes" : "no")<<std::endl;
     std::cout<<"popping all..."<<std::endl;
