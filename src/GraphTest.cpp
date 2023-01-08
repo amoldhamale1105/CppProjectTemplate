@@ -1,4 +1,5 @@
 #include "GraphTest.hpp"
+#include <Heap.hpp>
 
 void basicGraphTest()
 {
@@ -119,5 +120,28 @@ void basicGraphTest()
     }
     std::cout<<std::endl;
 
+    Graph<int> dijkstra;
+    dijkstra.addEdge(0,1,true,1);
+    dijkstra.addEdge(1,2,true,5);
+    dijkstra.addEdge(0,2,true,4);
+    dijkstra.addEdge(0,3,true,7);
+    dijkstra.addEdge(3,2,true,2);
+    dijkstra.addEdge(3,4,true,3);
+
+    std::cout<<"shortest distance from 0 to 2 is "<<dijkstra.shortestPath(0,2)<<std::endl;
+    std::cout<<"shortest distance from 0 to 4 is "<<dijkstra.shortestPath(0,4)<<std::endl;
+    std::cout<<"distance between 1 and 2 is "<<dijkstra.weight(1, 2)<<" connected? "<<(dijkstra.connected(1,2) ? "yes" : "no")<<std::endl;
+    std::cout<<"distance between 1 and 1 is "<<dijkstra.weight(1, 1)<<" connected? "<<(dijkstra.connected(1,1) ? "yes" : "no")<<std::endl;
+    std::cout<<"distance between 1 and 4 is "<<dijkstra.weight(1, 4)<<" connected? "<<(dijkstra.connected(1,4) ? "yes" : "no")<<std::endl;
+
+    std::cout<<"Shortest path from 0 to 4: ";
+    Vector<int> pathToDest;
+    dijkstra.shortestPath(0, 4, pathToDest);
+    for(auto i = 0; i < pathToDest.size(); i++)
+    {
+        std::cout<<pathToDest.at(i)<<"->";
+    }
+    std::cout<<"reached"<<std::endl;
+    
     std::cout<<"--------------ending Graph test-----------------\n"<<std::endl;
 }
