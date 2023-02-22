@@ -47,5 +47,9 @@ void basicStringTest()
     str += concat;
     std::cout<<name<<" + "<<concat<<" -> "<<str<<std::endl;
 
+    String subCheck = "This is a substring test";
+    std::cout<<subCheck.substr()<<"\nSubstrings:"<<std::endl;
+    std::cout<<subCheck.substr(2,5)<<std::endl<<subCheck.substr(13)<<std::endl<<subCheck.substr(4,40)<<std::endl<<subCheck.substr(30)<<std::endl;
+
     std::cout<<"--------------ending String test-----------------\n"<<std::endl;
 }
