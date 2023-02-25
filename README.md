@@ -15,24 +15,17 @@ If you're new to C++ or cmake build system, carefully observe placement of sampl
 
 # Build instructions
 If you're intending to create a shared library, uncomment the `add_library()` call and comment out the `add_executable()` call in `CMakeLists.txt`  
-Follow the ensuing instrcutions depending on your dev environment  
-
-## VS Code
-Open the project and click on the **CMake** option in the taskbar  
-Configure the project using `Clean Reconfigure All`. Subsequently, build it using `Clean Rebuild All`  
-
-## Terminal/shell
-Open terminal window/shell and navigate to project root on the terminal  
-Run the following comands once at the root of the project  
+The project can be built using the `build.sh` script in the source tree. It can be run without any options for default build configuration. Defaults for each option will appear in `{}` in the usage instruction after running the following command from the project source  
 ```
-mkdir -p build
-cd build
-cmake ..
-make
+./build.sh -h
 ```
-Build artifacts will be generated in the `build` directory  
-Output Artifacts will be in either `bin` or `lib` directory depending on cmake configuration  
-In case of shared library generation, it will be present as `lib<ProjectName>.so` file in the `lib` directory which can be further linked or moved to your target application  
+As an example, if you want to use the script to build for release mode with `Unix Makefiles` cmake generator, the script can be executed as follows  
+```
+./build.sh -a -r -g "Unix Makefiles"
+```
+Build artifacts will be generated in the `build` directory on a successful configuration  
+Output artifacts will be present in either the `bin` or `lib` directory depending on whether cmake has been setup to build an executable or a shared library  
+In case you wish to set up the build script to handle external dependencies, refer to the build script of https://github.com/amoldhamale1105/ShoppingCart
 
 ## Output and Testing
 If you intended to generate an executable, run the binary/executable from the `bin` directory to launch.  
